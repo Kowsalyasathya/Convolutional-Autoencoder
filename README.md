@@ -1,43 +1,36 @@
 # Convolutional Autoencoder for Image Denoising
 
 ## AIM
-
 To develop a convolutional autoencoder for image denoising application.
 
 ## Problem Statement and Dataset
-
 We aim to train a deep learning model that takes noisy MNIST images as input and outputs clean, denoised versions of those images. We use the MNIST handwritten digits dataset, which contains 28×28 grayscale images of digits from 0 to 9.
 
 ## DESIGN STEPS
-
 ### STEP 1:
 
 Import the required libraries including PyTorch, torchvision, and matplotlib.
-
 ### STEP 2:
 
 Load the MNIST dataset with proper transforms (e.g., transforms.ToTensor()).
-
 ### STEP 3:
+
 Define a function to add Gaussian noise to the dataset.
-
 ### STEP 4:
+
 Design the convolutional autoencoder architecture with encoder and decoder blocks using nn.Conv2d and nn.ConvTranspose2d.
-
 ### STEP 5:
-Initialize the model, define the loss function (MSELoss), and select an optimizer (Adam).
 
+Initialize the model, define the loss function (MSELoss), and select an optimizer (Adam).
 ### STEP 6:
 Train the model using noisy images as input and clean images as targets.
 
 ### STEP 7:
 Visualize the performance by plotting original, noisy, and reconstructed images.
 
-
 ## PROGRAM
 ### Name: Kowsalya M
 ### Register Number: 212222230069
-
 ```
 # Autoencoder for Image Denoising using PyTorch
 import torch
@@ -166,19 +159,13 @@ def visualize_denoising(model, loader, num_images=5):
 train(model, train_loader, criterion, optimizer, epochs=5)
 visualize_denoising(model, test_loader)
 ```
-
-
 ## OUTPUT
-
 ### Model Summary
-
 ![442593311-1bc7ba78-8f61-4264-a6ca-09f3edd03d79](https://github.com/user-attachments/assets/1b469377-984a-4136-98d7-361f7e6da8ca)
-
 
 ### Original vs Noisy Vs Reconstructed Image
 
 ![442593331-9ee580d8-0e00-4672-ba3b-6aa39755c9a2](https://github.com/user-attachments/assets/f59c1544-a8dd-4910-87a2-a7412bacc682)
-
 
 ## RESULT
 A convolutional autoencoder was successfully implemented using PyTorch to denoise MNIST images. The model was able to reconstruct clean images from noisy inputs, demonstrating its effectiveness in feature learning and denoising tasks.
